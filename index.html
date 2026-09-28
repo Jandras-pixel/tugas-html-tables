@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tables - Grade A, B, C</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 24px;
+      background: #fff;
+      color: #000;
+    }
+
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.15rem; margin-top: 40px; }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 4px 10px;
+      text-align: center;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: bold;
+      padding-bottom: 6px;
+    }
+
+    /* Grade A */
+    #grade-a th { font-weight: bold; }
+    #grade-a td { font-weight: normal; }
+    #grade-a tbody th { font-weight: normal; }
+    #grade-a td:last-child { font-weight: bold; }
+    #grade-a { font-size: 0.85rem; }
+
+    /* Grade B */
+    #grade-b { width: 480px; }
+    #grade-b thead th {
+      background-color: #5b8de6;
+      color: #fff;
+    }
+    #grade-b tbody th { font-weight: normal; }
+
+    /* Grade C */
+    #grade-c { width: 500px; }
+    #grade-c thead th {
+      background-color: #5b8de6;
+      color: #fff;
+    }
+    #grade-c tbody th { font-weight: normal; }
+  </style>
+</head>
+<body>
+
+  <h1>Tugas HTML Tables</h1>
+
+  <!-- ================= GRADE A ================= -->
+  <section>
+    <h2>Grade A</h2>
+    <table id="grade-a">
+      <caption>Tabel Hasil Ujian</caption>
+      <thead>
+        <tr>
+          <th rowspan="3" scope="col">No</th>
+          <th rowspan="3" scope="col">Nama</th>
+          <th colspan="6" scope="colgroup">Hasil Ujian</th>
+          <th rowspan="3" scope="col">Keterangan</th>
+        </tr>
+        <tr>
+          <th colspan="2" scope="colgroup">HTML</th>
+          <th colspan="2" scope="colgroup">CSS</th>
+          <th colspan="2" scope="colgroup">JavaScript</th>
+        </tr>
+        <tr>
+          <th scope="col">Initial</th>
+          <th scope="col">Final</th>
+          <th scope="col">Initial</th>
+          <th scope="col">Final</th>
+          <th scope="col">Initial</th>
+          <th scope="col">Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <th scope="row">Bill</th>
+          <td>80</td><td>90</td>
+          <td>78</td><td>85</td>
+          <td>85</td><td>90</td>
+          <td>Lulus</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <th scope="row">Budi</th>
+          <td>78</td><td>90</td>
+          <td>88</td><td>90</td>
+          <td>80</td><td>88</td>
+          <td>Lulus</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <th scope="row">Abde</th>
+          <td>82</td><td>89</td>
+          <td>84</td><td>87</td>
+          <td>84</td><td>90</td>
+          <td>Lulus</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ================= GRADE B ================= -->
+  <section>
+    <h2>Grade B</h2>
+    <table id="grade-b">
+      <thead>
+        <tr>
+          <th colspan="4" scope="colgroup">Laporan Mahasiswa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="2" scope="colgroup">Nama</th>
+          <th colspan="2" scope="colgroup">Alamat</th>
+        </tr>
+        <tr>
+          <th scope="col">Nama Depan</th>
+          <th scope="col">Nama Belakang</th>
+          <th scope="col">Jalan</th>
+          <th scope="col">Kota</th>
+        </tr>
+        <tr>
+          <td>Raka Gibran</td>
+          <td>Buming</td>
+          <td>Sudirman</td>
+          <td>Bandung</td>
+        </tr>
+        <tr>
+          <th colspan="4" scope="colgroup">Hasil Studi</th>
+        </tr>
+        <tr>
+          <th colspan="2" scope="col">Mata Kuliah</th>
+          <th colspan="2" scope="col">Nilai</th>
+        </tr>
+        <tr>
+          <td colspan="2">Matematika</td>
+          <td colspan="2">A</td>
+        </tr>
+        <tr>
+          <td colspan="2">Fisika</td>
+          <td colspan="2">B</td>
+        </tr>
+        <tr>
+          <th colspan="4" scope="colgroup">Catatan Tambahan</th>
+        </tr>
+        <tr>
+          <td colspan="4">Mahasiswa memiliki ketertarikan yang tinggi dalam kegiatan ekstrakurikuler.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ================= GRADE C ================= -->
+  <section>
+    <h2>Grade C</h2>
+    <table id="grade-c">
+      <caption>Jadwal Kuliah</caption>
+      <thead>
+        <tr>
+          <th scope="col">Hari</th>
+          <th scope="col">Waktu</th>
+          <th scope="col">Mata Kuliah</th>
+          <th scope="col">Dosen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Senin</th>
+          <td>08:00 - 10:00</td>
+          <td>Kalkulus</td>
+          <td>Prof. Ahmad</td>
+        </tr>
+        <tr>
+          <th scope="row">Selasa</th>
+          <td>09:00 - 11:00</td>
+          <td>Algoritma dan Struktur Data</td>
+          <td>Dr. Budi</td>
+        </tr>
+        <tr>
+          <th scope="row">Rabu</th>
+          <td>10:00 - 12:00</td>
+          <td>Pemrograman Web</td>
+          <td>Dr. Cindy</td>
+        </tr>
+        <tr>
+          <th scope="row">Kamis</th>
+          <td>08:00 - 10:00</td>
+          <td>Jaringan Komputer</td>
+          <td>Prof. Elsa</td>
+        </tr>
+        <tr>
+          <th scope="row">Jumat</th>
+          <td>13:00 - 15:00</td>
+          <td>Basis Data</td>
+          <td>Dr. Farhan</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
